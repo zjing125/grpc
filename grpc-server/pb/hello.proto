@@ -1,0 +1,22 @@
+syntax = "proto3"; // 版本声明，使用Protocol Buffers v3版本
+
+option go_package = "学习Go语言可以按照下面的顺序学习： 0.go module模式下开始新项目强烈建议先看这个视频: https://b23.tv/pa3R8Z 1.Go语言基础快速入门视频教程：https://b23.tv/IxScdW 2.Go Web开发基础gin框架入门教程：https://b23.tv/rPkNrG   自己动手写个小清单项目 3.Go Web开发进阶实战课程：https://study.163.com/course/courseMain.htm?courseId=1210171207&share=2&shareId=480000002229610  各种业务开发必备的实战技巧，搭建通用开发脚手架，各种部署方案全掌握。 ;pb";  // 指定go package名称；学习Go语言可以按照下面的顺序学习： 0.go module模式下开始新项目强烈建议先看这个视频: https://b23.tv/pa3R8Z 1.Go语言基础快速入门视频教程：https://b23.tv/IxScdW 2.Go Web开发基础gin框架入门教程：https://b23.tv/rPkNrG   自己动手写个小清单项目 3.Go Web开发进阶实战课程：https://study.163.com/course/courseMain.htm?courseId=1210171207&share=2&shareId=480000002229610  各种业务开发必备的实战技巧，搭建通用开发脚手架，各种部署方案全掌握。 通常为你项目的导入路径
+
+package pb; // 包名
+
+
+// 定义服务
+service Greeter {
+  // SayHello 方法
+  rpc SayHello (HelloRequest) returns (HelloResponse) {}
+}
+
+// 请求消息
+message HelloRequest {
+  string name = 1;
+}
+
+// 响应消息
+message HelloResponse {
+  string replay = 1;
+}
